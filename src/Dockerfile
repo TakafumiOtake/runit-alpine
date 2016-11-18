@@ -14,8 +14,8 @@ RUN RUNIT_VERSION="2.1.2" \
         musl-dev \
     && curl -fSL http://smarden.org/runit/runit-$RUNIT_VERSION.tar.gz -o runit.tar.gz \
     && echo "$RUNIT_SHA1  runit.tar.gz" | sha1sum -c \
-    && mkdir -p /usr/src \
-    && tar -zxC /usr/src -f runit.tar.gz --strip-component=2 \
+    && mkdir -p /usr/src/runit \
+    && tar -zxC /usr/src/runit -f runit.tar.gz --strip-component=2 \
     && rm -f runit.tar.gz \
     && cd /usr/src/runit/src \
     && make \
