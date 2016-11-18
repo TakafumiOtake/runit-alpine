@@ -1,0 +1,3 @@
+#! /bin/sh
+export > /etc/env
+exec /usr/sbin/runsvdir -P /service

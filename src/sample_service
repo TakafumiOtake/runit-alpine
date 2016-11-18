@@ -1,0 +1,6 @@
+#! /bin/sh
+
+source /etc/env
+exec 2>&1
+
+exec /bin/sh -c "while true; do echo hello; sleep 5; done"
