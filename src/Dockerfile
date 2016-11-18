@@ -24,7 +24,7 @@ RUN RUNIT_VERSION="2.1.2" \
     && cd / \
     && rm -rf /usr/src/runit \
     && apk del .build-deps \
-    && mkdir /service
+    && mkdir /service \
     && chmod 755 /usr/sbin/runit_bootstrap
 
 ENTRYPOINT ["/usr/sbin/runit_bootstrap"]
