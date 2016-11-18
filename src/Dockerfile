@@ -19,6 +19,7 @@ RUN RUNIT_VERSION="2.1.2" \
     && rm -f runit.tar.gz \
     && cd /usr/src/runit/src \
     && make \
+    && cd .. \
     && cat package/commands | xargs -I {} mv -f src/{} /sbin/ \
     && cd / \
     && rm -rf /usr/src/runit \
